@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hunome_assignment/static/css/main.c25a806f.css",
+    "main.js": "/hunome_assignment/static/js/main.ca74a6fe.js",
+    "index.html": "/hunome_assignment/index.html",
+    "main.c25a806f.css.map": "/hunome_assignment/static/css/main.c25a806f.css.map",
+    "main.ca74a6fe.js.map": "/hunome_assignment/static/js/main.ca74a6fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c25a806f.css",
+    "static/js/main.ca74a6fe.js"
+  ]
+}
