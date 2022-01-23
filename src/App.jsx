@@ -3,18 +3,19 @@ import Song from "./Song.jsx";
 
 const App = () => {
 	const [songs, setSongs] = useState([]);
-	//const [query, setQuery] = useState("default");
+	const [type, setType] = useState(false);
 
-	//populate app with top 100 songs by default
+	//populate app with top 30 songs by default. Re-render results if 'type' changes
 	useEffect(() => {
 		getSongs();
-	});
+	}, [type]);
 
 	async function getSongs() {
 		const loadingMessage = document.querySelector(".loading");
 		const errorMessage = document.querySelector(".error");
-
-		fetch(`https://itunes.apple.com/us/rss/topsongs/limit=100/json`)
+		const songsOrAlbums = type ? "albums" : "songs";
+		console.log("test to see if this only runs once"); //useEffect's second parameter should stop repetitive calls
+		fetch(`https://itunes.apple.com/us/rss/top${songsOrAlbums}/limit=100/json`)
 			.then(async response => {
 				const data = await response.json();
 				//remove loading message
@@ -42,9 +43,20 @@ const App = () => {
 			});
 	}
 
+	function changeResults(e) {
+		setType(e.target.checked);
+		//useEffect will re-render our results due to its second parameter changing
+	}
+
 	return (
 		<div>
-			<header></header>
+			<header>
+				<input type="checkbox" id="selector" className="toggle" onChange={changeResults}></input>
+    			<label for="selector" className="label">
+					<div className="ball"></div>
+				</label>
+      			<span>Albums</span>
+			</header>
 			<p className="loading">LOADING...</p>
 			<div className="error">
 				<p>ERROR</p>
