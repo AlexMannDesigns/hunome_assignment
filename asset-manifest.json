@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hunome_assignment/static/css/main.c25a806f.css",
-    "main.js": "/hunome_assignment/static/js/main.ca74a6fe.js",
+    "main.css": "/hunome_assignment/static/css/main.a86adb4a.css",
+    "main.js": "/hunome_assignment/static/js/main.3a89cb9f.js",
     "index.html": "/hunome_assignment/index.html",
-    "main.c25a806f.css.map": "/hunome_assignment/static/css/main.c25a806f.css.map",
-    "main.ca74a6fe.js.map": "/hunome_assignment/static/js/main.ca74a6fe.js.map"
+    "main.a86adb4a.css.map": "/hunome_assignment/static/css/main.a86adb4a.css.map",
+    "main.3a89cb9f.js.map": "/hunome_assignment/static/js/main.3a89cb9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c25a806f.css",
-    "static/js/main.ca74a6fe.js"
+    "static/css/main.a86adb4a.css",
+    "static/js/main.3a89cb9f.js"
   ]
 }
