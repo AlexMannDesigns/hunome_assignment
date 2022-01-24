@@ -1,4 +1,5 @@
 import React from "react";
+import "./song.css";
 
 const Song = (props) => {
 
@@ -12,7 +13,7 @@ const Song = (props) => {
 	let artist = truncateString(props.artist);
 
 	return (
-		<div className="music-container">
+		<div data-testid="song" className="music-container">
 		<h2>{title}</h2>
 		<p><em>by {artist}</em></p>
 		<p><strong>{props.price}</strong></p>

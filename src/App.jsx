@@ -17,6 +17,7 @@ const App = () => {
 		const loadingMessage = document.querySelector(".loading");
 		const errorMessage = document.querySelector(".error");
 		const songsOrAlbums = type ? "albums" : "songs";
+
 		fetch(`https://itunes.apple.com/us/rss/top${songsOrAlbums}/limit=100/json`)
 			.then(async response => {
 				const data = await response.json();
